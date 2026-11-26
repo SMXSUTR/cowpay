@@ -1,5 +1,6 @@
 import { ArrowRight, Search } from "lucide-react";
 import styles from "../styles/InicioPublicoPage.module.css";
+import PasosParaUsarCowpay from "../components/PasosParaUsarCowpay";
 
 export function InicioPublicoPage() {
   return (
@@ -62,74 +63,84 @@ export function InicioPublicoPage() {
           aplicación móvil y desde ahí haces todo.
         </p>
 
-        <div className={styles.pasos}>
-          <div className={styles.paso}>
-            <div className={styles.pasoTitulo}>
-              <span className={styles.numero}>1</span>
-              <h3>Escanea el QR</h3>
-            </div>
-            <p>
-              Cada mesa tiene su propio código. Al escanearlo, CowPay ya sabe en
+        <PasosParaUsarCowpay
+          titulo="Escanea el QR"
+          texto="Cada mesa tiene su propio código. Al escanearlo, CowPay ya sabe en
               qué restaurante estás y en qué mesa te sentaste. No tienes que
-              escribir nada.
-            </p>
-          </div>
-
-          <div className={styles.paso}>
-            <div className={styles.pasoTitulo}>
-              <span className={styles.numero}>2</span>
-              <h3>Pide y disfruta</h3>
-            </div>
-            <p>
-              Ves el menú con fotos, precios y lo que está agotado hoy. Escoges
-              y el pedido entra directo a la cocina.
-            </p>
-          </div>
-
-          <div className={styles.paso}>
-            <div className={styles.pasoTitulo}>
-              <span className={styles.numero}>3</span>
-              <h3>Paga o divide</h3>
-            </div>
-            <p>
-              Cuando terminen, cada quien paga lo que consumió, en partes
-              iguales o por el monto que definan.
-            </p>
-          </div>
-        </div>
+              escribir nada."
+        />
+        
       </section>
 
       <section className={styles.paracomensales}>
         <span className={styles.para}>PARA COMENSALES</span>
         <h2> Lo que puedes hacer con tu cuenta</h2>
-        <p>Pedir no necesita cuenta. La cuenta te sirve para lo que pasa antes y después de la mesa.</p>
-
+        <p>
+          Pedir no necesita cuenta. La cuenta te sirve para lo que pasa antes y
+          después de la mesa.
+        </p>
 
         <div className={styles.comensales}>
-         <div className={styles.dividirsinpelear}>
-           <div className={styles.dividir}>
-             <h3>Divide sin pelear</h3>
-             <p>Por consumo, en partes iguales, por porcentaje o monto manual. Las partes siempre suman exactamente el total de la mesa.</p>
-           </div>
-         </div>
+          <div className={styles.dividirsinpelear}>
+            <div className={styles.dividir}>
+              <h3>Divide sin pelear</h3>
+              <p>
+                Por consumo, en partes iguales, por porcentaje o monto manual.
+                Las partes siempre suman exactamente el total de la mesa.
+              </p>
+            </div>
+          </div>
 
-         <div className={styles.reseñasvalen}>
-           <div className={styles.reseñassi}>
-             <h3>Divide sin pelear</h3>
-             <p>Solo puede reseñar quien consumió y pagó allí. Se publican anónimas, así que nadie se siente vigilado.</p>
-           </div>
-         </div>
+          <div className={styles.reseñasvalen}>
+            <div className={styles.reseñassi}>
+              <h3>Divide sin pelear</h3>
+              <p>
+                Solo puede reseñar quien consumió y pagó allí. Se publican
+                anónimas, así que nadie se siente vigilado.
+              </p>
+            </div>
+          </div>
 
-         <div className={styles.todohistorial}>
-           <div className={styles.historial}>
-             <h3>Todo tu historial</h3>
-             <p>Cada visita queda con su recibo descargable, lo que pediste y cuánto pagaste. Útil cuando toca reportar gastos.</p>
-           </div>
-         </div>
-         
+          <div className={styles.todohistorial}>
+            <div className={styles.historial}>
+              <h3>Todo tu historial</h3>
+              <p>
+                Cada visita queda con su recibo descargable, lo que pediste y
+                cuánto pagaste. Útil cuando toca reportar gastos.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.tufavorito}>
+            <div className={styles.favoritos}>
+              <h3>Tus favoritos a la mano</h3>
+              <p>
+                Guarda los restaurantes que te gustan y vuelve a pedir lo mismo
+                en dos toques.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.amigosguardados}>
+            <div className={styles.amigos}>
+              <h3>Amigos guardados</h3>
+              <p>
+                Los que siempre comen contigo quedan listos para asignarles su
+                parte sin escribir nombres cada vez
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.avisospedido}>
+            <div className={styles.avisos}>
+              <h3>Avisos de tu pedido.</h3>
+              <p>
+                Te decimos cuándo entró a cocina, cuándo está listo y cuándo se
+                aprobó tu pago.
+              </p>
+            </div>
+          </div>
         </div>
-
-
       </section>
     </main>
   );
