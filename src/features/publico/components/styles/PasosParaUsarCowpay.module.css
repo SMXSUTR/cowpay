@@ -1,16 +1,18 @@
-
 .pasos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  max-width: 900px;
+  gap: 18px;
+  max-width: 880px;
   margin: 0 auto;
+  font-family: Inter, Arial, sans-serif;
 }
 
 .paso {
+  min-height: 174px;
+  padding: 20px;
   background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 24px;
   text-align: left;
 }
 
@@ -18,18 +20,39 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 34px;
+}
+
+.pasoTitulo h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
 }
 
 .numero {
-  background: #e6f4e8;
-  color: var(--color-verde-para-los-botones);
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef8ee;
+  color: #111827;          
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.paso p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 17px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .pasos {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,7 @@
 import { ArrowRight, Search } from "lucide-react";
 import styles from "../styles/InicioPublicoPage.module.css";
 import PasosParaUsarCowpay from "../components/PasosParaUsarCowpay";
+import stylesPasos from "../components/styles/PasosParaUsarCowpay.module.css";
 
 export function InicioPublicoPage() {
   return (
@@ -63,13 +64,23 @@ export function InicioPublicoPage() {
           aplicación móvil y desde ahí haces todo.
         </p>
 
-        <PasosParaUsarCowpay
-          titulo="Escanea el QR"
-          texto="Cada mesa tiene su propio código. Al escanearlo, CowPay ya sabe en
-              qué restaurante estás y en qué mesa te sentaste. No tienes que
-              escribir nada."
-        />
-        
+        <div className={stylesPasos.pasos}>
+          <PasosParaUsarCowpay
+            numero={1}
+            titulo="Escanea el QR"
+            texto="Cada mesa tiene su propio código. Al escanearlo, CowPay ya sabe en qué restaurante estás y en qué mesa te sentaste. No tienes que escribir nada."
+          />
+          <PasosParaUsarCowpay
+            numero={2}
+            titulo="Pide y disfruta"
+            texto="Ves el menú con fotos, precios y lo que está agotado hoy. Escoges, agregas observaciones para la cocina y el pedido entra directo. Puedes seguir en vivo cómo va."
+          />
+          <PasosParaUsarCowpay
+            numero={3}
+            titulo="Paga o divide"
+            texto="Cuando terminen, cada quien paga lo que consumió, en partes iguales o por el monto que ustedes definan. Con tarjeta, Nequi, PSE o efectivo."
+          />
+        </div>
       </section>
 
       <section className={styles.paracomensales}>
